@@ -1,0 +1,161 @@
+{
+  "kind":"Dallas Representative Info",
+  "user-input": {
+    "location Name":"",
+    "line1": "",
+    "line2": "",
+    "line3": "",
+    "city": "",
+    "state": "",
+    "zip": ""
+  },
+  "representatives": [
+    {
+      "name": "Scott Griggs",
+      "district": "District 1",
+      "address": [
+        {
+          "locationName": "Dallas City Hall",
+          "line1": "1500 Marilla St.",
+          "line2": "Room 5FN",
+          "line3": "",
+          "city": "Dallas",
+          "state": "Texas",
+          "zip": "75201"
+        }
+      ],
+      "party": "",
+      "phones": [
+        "(214) 670-0776"
+      ],
+      "fax":[
+        "(214) 670-5117"
+      ],
+      "urls": [
+        ""
+      ],
+      "photoUrl": "",
+      "emails": [
+        "scott.griggs@dallascityhall.com"
+      ],
+      "channels": [
+        {
+          "type": "",
+          "id": ""
+        }
+      ],
+      "staff": [
+        {
+          "name":"Mina Ramon",
+          "position":"Assistant",
+          "email":"herminia.ramon@dallascityhall.com",
+          "phone":"214-670-0776"
+        },
+        {
+          "name":"Steven Schenck",
+          "position":"Secretary",
+          "email":"steven.schenck@dallascityhall.com",
+          "phone":"214-671-8917"
+        }
+      ]
+    },
+    {
+      "name": "Adam Medrano",
+      "district": "District 2",
+      "address": [
+        {
+          "locationName": "Dallas City Hall",
+          "line1": "1500 Marilla St.",
+          "line2": "Room 5FN",
+          "line3": "",
+          "city": "Dallas",
+          "state": "Texas",
+          "zip": "75201"
+        }
+      ],
+      "party": "",
+      "phones": [
+        "(214) 670-4048"
+      ],
+      "fax":[
+        "(214) 670-3409"
+      ],
+      "urls": [
+        "http://dallascityhall.com/government/citycouncil/district2/Pages/default.aspx"
+      ],
+      "photoUrl": "",
+      "emails": [
+        "adam.medrano@dallascityhall.com"
+      ],
+      "channels": [
+        {
+          "type": "",
+          "id": ""
+        }
+      ],
+      "staff": [
+        {
+          "name":"Monica Huerta",
+          "position":"Assistant",
+          "email":"monica.huerta2@dallascityhall.com",
+          "phone":"(214) 670-4048"
+        },
+        {
+          "name":"Vernesha Cathey",
+          "position":"Secretary",
+          "email":"vernesha.cathey@dallascityhall.com",
+          "phone":"(214) 670-4171"
+        }
+      ]
+    },
+    {
+      "name": "Casey Thomas, II",
+      "district": "District 3",
+      "address": [
+        {
+          "locationName": "Dallas City Hall",
+          "line1": "1500 Marilla St.",
+          "line2": "Room 5FN",
+          "line3": "",
+          "city": "Dallas",
+          "state": "Texas",
+          "zip": "75201"
+        }
+      ],
+      "party": "",
+      "phones": [
+        "(214) 670-0777"
+      ],
+      "fax":[
+        "(214) 670-5117"
+      ],
+      "urls": [
+        "http://dallascityhall.com/government/citycouncil/district3/Pages/default.aspx"
+      ],
+      "photoUrl": "",
+      "emails": [
+        "scott.griggs@dallascityhall.com"
+      ],
+      "channels": [
+        {
+          "type": "",
+          "id": ""
+        }
+      ],
+      "staff": [
+        {
+          "name":"Mina Ramon",
+          "position":"Assistant",
+          "email":"herminia.ramon@dallascityhall.com",
+          "phone":"214-670-0776"
+        },
+        {
+          "name":"Steven Schenck",
+          "position":"Secretary",
+          "email":"steven.schenck@dallascityhall.com",
+          "phone":"214-671-8917"
+        }
+      ]
+    }
+  ]
+}
