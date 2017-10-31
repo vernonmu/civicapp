@@ -34,6 +34,10 @@
         {
           "type": "twitter",
           "id": "scottgriggsdal"
+        },
+        {
+          "type":"facebook",
+          "id": null
         }
       ],
       "staff": [
@@ -83,6 +87,10 @@
         {
           "type": "twitter",
           "id": "VoteAdamMedrano"
+        },
+        {
+          "type":"facebook",
+          "id": null
         }
       ],
       "staff": [
@@ -130,6 +138,10 @@
         {
           "type": "twitter",
           "id": "caseyt07"
+        },
+        {
+          "type":"facebook",
+          "id": null
         }
       ],
       "staff": [
@@ -179,6 +191,10 @@
         {
           "type": "twitter",
           "id": "DwaineRCaraway"
+        },
+        {
+          "type":"facebook",
+          "id": null
         }
       ],
       "staff": [
@@ -226,8 +242,12 @@
       ],
       "channels": [
         {
-          "type": "",
-          "id": ""
+          "type": "twitter",
+          "id": null
+        },
+        {
+          "type":"facebook",
+          "id": null
         }
       ],
       "staff": [
@@ -381,6 +401,10 @@
         {
           "type": "twitter",
           "id": "atkins_tennell"
+        },
+        {
+          "type":"facebook",
+          "id": null
         }
       ],
       "staff": [
@@ -431,7 +455,7 @@
         },
         {
           "type":"facebook",
-          "type":"markclaytonfordistrict9"
+          "id":"markclaytonfordistrict9"
         }
       ],
       "staff": [
@@ -484,7 +508,7 @@
         },
         {
           "type":"facebook",
-          "type":"AdamMcGoughD10"
+          "id":"AdamMcGoughD10"
         }
       ],
       "staff": [
@@ -585,7 +609,16 @@
       "emails": [
         "sandy.greyson@dallascityhall.com"
       ],
-      "channels": null,
+      "channels": [
+        {
+          "type":"twitter",
+          "id": null
+        },
+        {
+          "type":"facebook",
+          "id": null
+        }
+      ],
       "staff": [
         {
           "name":"Navaz Kayani Irani",
@@ -632,7 +665,7 @@
         },
         {
           "type":"facebook",
-          "type":"Dallas-City-Council-District-13-1263592880398372"
+          "id":"Dallas-City-Council-District-13-1263592880398372"
         }
       ],
       "staff": [
@@ -685,7 +718,7 @@
         },
         {
           "type":"facebook",
-          "type":"PhilipTKingston"
+          "id":"PhilipTKingston"
         }
       ],
       "staff": [

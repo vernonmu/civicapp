@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
 
       form {
@@ -22,6 +23,28 @@
       .brand {
         padding-top: 25px;
       }
+
+      .results__staff-block {
+        margin-top: 25px;
+      }
+
+      .results-member__container,
+      .results__staff-block {
+        padding:10px;
+        border-radius: 5px;
+        border: 1px solid #eee;
+      }
+
+      .results-member__social {
+        padding-top: 10px;
+        padding-bottom: 5px;
+      }
+
+      .search__input {
+        padding-top: 25px;
+      }
+
+
     </style>
   </head>
   <body ng-controller="mainCtrl">
@@ -29,13 +52,17 @@
       <div class="row">
         <div class="col-12 brand">
           <h1>Dallas Reps</h1>
+          <span>Find and contact your council member</span>
         </div>
       </div>
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 search__input">
           <form ng-submit="getAddress(input)">
-            <input class="col-4" type="text" ng-model="input">
-            <button type="submit" class="btn btn-primary">Get Input!</button>
+            <input class="col-4"
+                  type="text"
+                  ng-model="input"
+                  placeholder="Enter your address">
+            <button type="submit" class="btn btn-primary">Search</button>
           </form>
         </div>
       </div>
@@ -44,37 +71,39 @@
           <div ng-if="!yourInfo">
             Sorry! No results were found. Is this address within Dallas city?
           </div>
-          <div class="" ng-repeat="person in yourInfo">
-            <p>
+          <div ng-repeat="person in yourInfo">
+            <div class="results-member__container">
               <strong>Council Member:</strong> {{matchedRep.name}}<br>
 
               <strong>District:</strong> {{matchedRep.district}}
 
-              <div ng-if="matchedRep.emails">
-               <strong>Email:</strong> <span ng-repeat="email in matchedRep.emails"><a href="mailto:{{email}}">{{email}}</a></span>
+              <div class="" ng-if="matchedRep.phones">
+                <strong>Phone:</strong> <span ng-repeat="phone in matchedRep.phones">{{phone}}</span>
               </div>
 
-               <strong>Phone:</strong> <span ng-repeat="phone in matchedRep.phones">{{phone}}</span>
-             </p>
-             <p>
-               <strong>Staff:</strong><br>
-               <span ng-repeat="one in matchedRep.staff">
-                 {{one.name}}, <em>
-                 {{one.position}}</em><br>
-                 email: <a href="mailto:{{one.email}}">{{one.email}}</a><br>
-               </span>
-             </p>
+              <div ng-if="matchedRep.emails">
+               <!-- <strong>Email:</strong> -->
 
+               <span ng-repeat="email in matchedRep.emails"><a href="mailto:{{email}}"><i class="fa fa-envelope-o" aria-hidden="true"></i> {{email}}</a><br></span>
+              </div>
+
+              <div class="results-member__social">
+                <a href="http://www.twitter.com/{{matchedRep.channels[0].id}}" target="_blank" ng-if="matchedRep.channels[0].id !== null"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="http://www.facebook.com/{{matchedRep.channels[1].id}}" target="_blank" ng-if="matchedRep.channels[1].id !== null"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <!-- <a href="http://www.instagram.com/{{matchedRep.channels[2].id}}" target="_blank" ng-if="matchedRep.channels[0].id.length>0"><i class="fa fa-instagram" aria-hidden="true"></i></a> -->
+              </div>
+
+            </div>
+            <div class="results__staff-block">
+             <span><strong>Staff:</strong></span>
+             <p ng-repeat="one in matchedRep.staff">
+               {{one.name}}, <em>{{one.position}}</em><br>
+               <a href="mailto:{{one.email}}">{{one.email}}</a><br>
+               {{one.phone}}
+             </p>
+            </div>
           </div>
         </div>
-
-
-
-        <!-- <ul>
-          <li ng-repeat="rep in yourReps">
-            {{rep.name}}
-          </li>
-        </ul> -->
 
       </div>
     </div>
