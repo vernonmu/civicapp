@@ -46,10 +46,14 @@
           </div>
           <div class="" ng-repeat="person in yourInfo">
             <p>
-              <strong>Council Member:</strong> {{person.councilper}}<br>
-               <strong>District:</strong> {{person.council}}<br>
-               <strong>Office:</strong> {{person.comments}}<br>
-               <strong>Email:</strong> <span ng-repeat="email in matchedRep.emails"><a href="mailto:{{email}}">{{email}}</a></span><br>
+              <strong>Council Member:</strong> {{matchedRep.name}}<br>
+
+              <strong>District:</strong> {{matchedRep.district}}
+
+              <div ng-if="matchedRep.emails">
+               <strong>Email:</strong> <span ng-repeat="email in matchedRep.emails"><a href="mailto:{{email}}">{{email}}</a></span>
+              </div>
+
                <strong>Phone:</strong> <span ng-repeat="phone in matchedRep.phones">{{phone}}</span>
              </p>
              <p>

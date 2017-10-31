@@ -62,28 +62,6 @@ app.get('/data/:address', (req,res,next)=>{
     console.log(err);
   })
 
-  // axios.get('https://maps.googleapis.com/maps/api/js?key=${config.API_KEY}&callback=initMap')
-  // .then(function(response){
-  //
-  //   function codeAddress() {
-  //     var geocoder = new google.maps.Geocoder();
-  //     geocoder.geocode( { 'address': address }, function(results, status) {
-  //       if (status == 'OK') {
-  //         console.log(results[0].geometry);
-  //       }
-  //     })
-  //   }
-  //
-  //   codeAddress()
-  //
-  //   return res.status(200).json(response.data)
-  // })
-  //
-  //
-  // .catch(function(error){
-  //   console.log(error);
-  // })
-
 })
 
 const port = config.port

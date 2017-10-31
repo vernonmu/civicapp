@@ -1,18 +1,10 @@
 {
   "kind":"Dallas Representative Info",
-  "user-input": {
-    "location Name":"",
-    "line1": "",
-    "line2": "",
-    "line3": "",
-    "city": "",
-    "state": "",
-    "zip": ""
-  },
+
   "representatives": [
     {
       "name": "Scott Griggs",
-      "district": "District 1",
+      "district": 1,
       "address": [
         {
           "locationName": "Dallas City Hall",
@@ -24,7 +16,7 @@
           "zip": "75201"
         }
       ],
-      "party": "",
+
       "phones": [
         "(214) 670-0776"
       ],
@@ -32,7 +24,7 @@
         "(214) 670-5117"
       ],
       "urls": [
-        ""
+        "http://dallascityhall.com/government/citycouncil/district1/Pages/default.aspx"
       ],
       "photoUrl": "",
       "emails": [
@@ -40,8 +32,8 @@
       ],
       "channels": [
         {
-          "type": "",
-          "id": ""
+          "type": "twitter",
+          "id": "scottgriggsdal"
         }
       ],
       "staff": [
@@ -61,7 +53,7 @@
     },
     {
       "name": "Adam Medrano",
-      "district": "District 2",
+      "district": 2,
       "address": [
         {
           "locationName": "Dallas City Hall",
@@ -73,7 +65,7 @@
           "zip": "75201"
         }
       ],
-      "party": "",
+
       "phones": [
         "(214) 670-4048"
       ],
@@ -89,8 +81,8 @@
       ],
       "channels": [
         {
-          "type": "",
-          "id": ""
+          "type": "twitter",
+          "id": "VoteAdamMedrano"
         }
       ],
       "staff": [
@@ -110,7 +102,7 @@
     },
     {
       "name": "Casey Thomas, II",
-      "district": "District 3",
+      "district": 3,
       "address": [
         {
           "locationName": "Dallas City Hall",
@@ -122,7 +114,7 @@
           "zip": "75201"
         }
       ],
-      "party": "",
+
       "phones": [
         "(214) 670-0777"
       ],
@@ -133,8 +125,104 @@
         "http://dallascityhall.com/government/citycouncil/district3/Pages/default.aspx"
       ],
       "photoUrl": "",
+      "emails": null,
+      "channels": [
+        {
+          "type": "twitter",
+          "id": "caseyt07"
+        }
+      ],
+      "staff": [
+        {
+          "name":"Chris Soto",
+          "position":"Assistant",
+          "email":"richard.soto@dallascityhall.com",
+          "phone":"214-670-0777"
+        },
+        {
+          "name":"Yolanda Miller",
+          "position":"Secretary",
+          "email":"yolanda.miller@dallascityhall.com",
+          "phone":"214-670-0772"
+        }
+      ]
+    },
+    {
+      "name": "Dwaine R. Caraway",
+      "district": 4,
+      "address": [
+        {
+          "locationName": "Dallas City Hall",
+          "line1": "1500 Marilla St.",
+          "line2": "Room 5FS",
+          "line3": "",
+          "city": "Dallas",
+          "state": "Texas",
+          "zip": "75201"
+        }
+      ],
+
+      "phones": [
+        "(214) 670-0781"
+      ],
+      "fax":[
+        "(214) 670-5117"
+      ],
+      "urls": [
+        "http://dallascityhall.com/government/citycouncil/district4/Pages/default.aspx"
+      ],
+      "photoUrl": "",
       "emails": [
-        "scott.griggs@dallascityhall.com"
+        "district4@dallascityhall.com"
+      ],
+      "channels": [
+        {
+          "type": "twitter",
+          "id": "DwaineRCaraway"
+        }
+      ],
+      "staff": [
+        {
+          "name":"Norma Flores",
+          "position":"Assistant",
+          "email":"district4@dallascityhall.com",
+          "phone":"214-670-0781"
+        },
+        {
+          "name":"Lydia Spaun",
+          "position":"Secretary",
+          "email":"district4@dallascityhall.com",
+          "phone":"214-671-9347"
+        }
+      ]
+    },
+    {
+      "name": "Rickey D. Callahan",
+      "district": 5,
+      "address": [
+        {
+          "locationName": "Dallas City Hall",
+          "line1": "1500 Marilla St.",
+          "line2": "Room 5FS",
+          "line3": "",
+          "city": "Dallas",
+          "state": "Texas",
+          "zip": "75201"
+        }
+      ],
+
+      "phones": [
+        "(214) 670-4052"
+      ],
+      "fax":[
+        "(214) 670-5117"
+      ],
+      "urls": [
+        "http://dallascityhall.com/government/citycouncil/district5/Pages/default.aspx"
+      ],
+      "photoUrl": "",
+      "emails": [
+        "rick.callahan@dallascityhall.com"
       ],
       "channels": [
         {
@@ -144,16 +232,474 @@
       ],
       "staff": [
         {
-          "name":"Mina Ramon",
+          "name":"Rosa Gallegos",
           "position":"Assistant",
-          "email":"herminia.ramon@dallascityhall.com",
-          "phone":"214-670-0776"
+          "email":"rosa.gallegos@dallascityhall.com",
+          "phone":"214-670-4052"
         },
         {
-          "name":"Steven Schenck",
+          "name":"Julie Alexander",
+          "position":"Interim Secretary",
+          "email":"julie.alexander@dallascityhall.com",
+          "phone":"214-670-4055"
+        }
+      ]
+    },
+    {
+      "name": "Omar Narvaez",
+      "district": 6,
+      "address": [
+        {
+          "locationName": "Dallas City Hall",
+          "line1": "1500 Marilla St.",
+          "line2": "Room 5FS",
+          "line3": "",
+          "city": "Dallas",
+          "state": "Texas",
+          "zip": "75201"
+        }
+      ],
+
+      "phones": [
+        "(214) 670-6931"
+      ],
+      "fax":[
+        "(214) 670-5117"
+      ],
+      "urls": [
+        "http://dallascityhall.com/government/citycouncil/district6/Pages/default.aspx"
+      ],
+      "photoUrl": "",
+      "emails": null,
+      "channels": [
+        {
+          "type": "twitter",
+          "id": "VoteOmarNarvaez"
+        },
+        {
+          "type":"facebook",
+          "id":"VoteOmarNarvaez"
+        }
+      ],
+      "staff": [
+        {
+          "name":"Laura Cadena",
+          "position":"Assistant",
+          "email":"laura.cadena@dallascityhall.com",
+          "phone":"214-670-4199"
+        },
+        {
+          "name":"Yesenia Valdez",
           "position":"Secretary",
-          "email":"steven.schenck@dallascityhall.com",
-          "phone":"214-671-8917"
+          "email":"yesenia.valdez@dallascityhall.com",
+          "phone":"214-670-6931"
+        }
+      ]
+    },
+    {
+      "name": "Kevin Felder",
+      "district": 7,
+      "address": [
+        {
+          "locationName": "Dallas City Hall",
+          "line1": "1500 Marilla St.",
+          "line2": "Room 5FN",
+          "line3": "",
+          "city": "Dallas",
+          "state": "Texas",
+          "zip": "75201"
+        }
+      ],
+
+      "phones": [
+        "(214) 670-4689"
+      ],
+      "fax":[
+        "(214) 670-5117"
+      ],
+      "urls": [
+        "http://dallascityhall.com/government/citycouncil/district7/Pages/default.aspx"
+      ],
+      "photoUrl": "",
+      "emails": [
+        ""
+      ],
+      "channels": [
+        {
+          "type": "twitter",
+          "id": "felderk"
+        },
+        {
+          "type":"facebook",
+          "id":"kevin.felder.5099"
+        }
+      ],
+      "staff": [
+        {
+          "name":"Cindy Hall",
+          "position":"Council Assistant",
+          "email":"district7@dallascityhall.com",
+          "phone":"214-670-4689"
+        },
+        {
+          "name":"Elena Lopez-Aguirre",
+          "position":"Council Secretary",
+          "email":"district7@dallascityhall.com",
+          "phone":"214-671-8919"
+        }
+      ]
+    },
+    {
+      "name": "Tennell Atkins",
+      "district": 8,
+      "address": [
+        {
+          "locationName": "Dallas City Hall",
+          "line1": "1500 Marilla St.",
+          "line2": "Room 5DN",
+          "line3": "",
+          "city": "Dallas",
+          "state": "Texas",
+          "zip": "75201"
+        }
+      ],
+
+      "phones": [
+        "(214) 670-4066"
+      ],
+      "fax":[
+        "(214) 670-5117"
+      ],
+      "urls": [
+        "http://dallascityhall.com/government/citycouncil/district8/Pages/default.aspx"
+      ],
+      "photoUrl": "",
+      "emails": [
+        ""
+      ],
+      "channels": [
+        {
+          "type": "twitter",
+          "id": "atkins_tennell"
+        }
+      ],
+      "staff": [
+        {
+          "name":"Maria Salazar",
+          "position":"Assistant",
+          "email":"maria.salazar2@dallascityhall.com",
+          "phone":"214-670-4066"
+        },
+        {
+          "name":"Kendra Douglas",
+          "position":"Secretary",
+          "email":"kendra.douglas@dallascityhall.com",
+          "phone":"214-670-0779"
+        }
+      ]
+    },
+    {
+      "name": "Mark Clayton",
+      "district": 9,
+      "address": [
+        {
+          "locationName": "Dallas City Hall",
+          "line1": "1500 Marilla St.",
+          "line2": "Room 5FN",
+          "line3": "",
+          "city": "Dallas",
+          "state": "Texas",
+          "zip": "75201"
+        }
+      ],
+
+      "phones": [
+        "(214) 670-4069"
+      ],
+      "fax":[
+        "(214) 670-5117"
+      ],
+      "urls": [
+        "http://dallascityhall.com/government/citycouncil/district9/Pages/default.aspx"
+      ],
+      "photoUrl": "",
+      "emails": null,
+      "channels": [
+        {
+          "type": "twitter",
+          "id": "MarkClaytonD9"
+        },
+        {
+          "type":"facebook",
+          "type":"markclaytonfordistrict9"
+        }
+      ],
+      "staff": [
+        {
+          "name":"Emily Worland",
+          "position":"Assistant",
+          "email":"emily.worland@dallascityhall.com",
+          "phone":"214-670-4069"
+        },
+        {
+          "name":"Karen Levingston",
+          "position":"Secretary",
+          "email":"karen.levingston@dallascityhall.com",
+          "phone":"214-671-8916"
+        }
+      ]
+    },
+    {
+      "name": "B. Adam McGough",
+      "district": 10,
+      "address": [
+        {
+          "locationName": "Dallas City Hall",
+          "line1": "1500 Marilla St.",
+          "line2": "Room 5FS",
+          "line3": null,
+          "city": "Dallas",
+          "state": "Texas",
+          "zip": "75201"
+        }
+      ],
+
+      "phones": [
+        "(214) 670-4068"
+      ],
+      "fax":[
+        "(214) 670-5117"
+      ],
+      "urls": [
+        "http://dallascityhall.com/government/citycouncil/district10/Pages/default.aspx", "http://allind10.com/"
+      ],
+      "photoUrl": "",
+      "emails": [
+        "adam.mcgough@dallascityhall.com"
+      ],
+      "channels": [
+        {
+          "type": "twitter",
+          "id": "ServeDallas"
+        },
+        {
+          "type":"facebook",
+          "type":"AdamMcGoughD10"
+        }
+      ],
+      "staff": [
+        {
+          "name":"Cristal Retana",
+          "position":"Assistant",
+          "email":"cristal.retana@dallascityhall.com",
+          "phone":"214-670-4068"
+        },
+        {
+          "name":"Vacant",
+          "position":"Secretary",
+          "email":"district10@dallascityhall.com",
+          "phone":"214-670-5958"
+        }
+      ]
+    },
+    {
+      "name": "Lee M. Kleinman",
+      "district": 11,
+      "address": [
+        {
+          "locationName": "Dallas City Hall",
+          "line1": "1500 Marilla St.",
+          "line2": "Room 5FS",
+          "line3": "",
+          "city": "Dallas",
+          "state": "Texas",
+          "zip": "75201"
+        }
+      ],
+
+      "phones": [
+        "(214) 670-7817"
+      ],
+      "fax":[
+        "(214) 670-5117"
+      ],
+      "urls": [
+        "http://dallascityhall.com/government/citycouncil/district11/Pages/default.aspx", "http://www.leekleinman.com/"
+      ],
+      "photoUrl": "",
+      "emails": null,
+      "channels": [
+        {
+          "type": "twitter",
+          "id": "leefordallas"
+        },
+        {
+          "type":"facebook",
+          "id":"leefordallas"
+        },
+        {
+          "type":"instagram",
+          "id":"leefordallas"
+        }
+      ],
+      "staff": [
+        {
+          "name":"Sophia Figueroa",
+          "position":"Assistant",
+          "email":"sophia.figueroadallascityhall.com",
+          "phone":"214-670-7817"
+        },
+        {
+          "name":"Madison Long",
+          "position":"Secretary",
+          "email":"madison.long@dallascityhall.com",
+          "phone":"214-671-8920"
+        }
+      ]
+    },
+    {
+      "name": "Sandy Greyson",
+      "district": 12,
+      "address": [
+        {
+          "locationName": "Dallas City Hall",
+          "line1": "1500 Marilla St.",
+          "line2": "Room 5FN",
+          "line3": "",
+          "city": "Dallas",
+          "state": "Texas",
+          "zip": "75201"
+        }
+      ],
+
+      "phones": [
+        "(214) 670-4067"
+      ],
+      "fax":[
+        "(214) 670-5117"
+      ],
+      "urls": [
+        "http://dallascityhall.com/government/citycouncil/district12/Pages/default.aspx", "http://www.sandygreyson.com/"
+      ],
+      "photoUrl": "",
+      "emails": [
+        "sandy.greyson@dallascityhall.com"
+      ],
+      "channels": null,
+      "staff": [
+        {
+          "name":"Navaz Kayani Irani",
+          "position":"Assistant",
+          "email":"navaz.kayaniirani@dallascityhall.com",
+          "phone":"214-670-4067"
+        },
+        {
+          "name":"Cherelle Belcher",
+          "position":"Secretary",
+          "email":"cherelle.belcher@dallascityhall.com",
+          "phone":"214-671-8921"
+        }
+      ]
+    },
+    {
+      "name": "Jennifer Staubach Gates",
+      "district": 13,
+      "address": [
+        {
+          "locationName": "Dallas City Hall",
+          "line1": "1500 Marilla St.",
+          "line2": "Room 5FS",
+          "line3": "",
+          "city": "Dallas",
+          "state": "Texas",
+          "zip": "75201"
+        }
+      ],
+
+      "phones": null,
+      "fax":null,
+      "urls": [
+        "http://dallascityhall.com/government/citycouncil/district13/Pages/default.aspx"
+      ],
+      "photoUrl": "",
+      "emails": [
+        "jennifer.gates@dallascityhall.com", "district13@dallascityhall.com"
+      ],
+      "channels": [
+        {
+          "type": "twitter",
+          "id": "cmjsgates"
+        },
+        {
+          "type":"facebook",
+          "type":"Dallas-City-Council-District-13-1263592880398372"
+        }
+      ],
+      "staff": [
+        {
+          "name":"Alexa Relayze",
+          "position":"Secretary",
+          "email":"alexandra.relayze@dallascityhall.com",
+          "phone":"214-670-7057"
+        },
+        {
+          "name":"Carolyn Williamson",
+          "position":"Council Assistant",
+          "email":"carolyn.williamson@dallascityhall.com",
+          "phone":"214-670-3816"
+        }
+      ]
+    },
+    {
+      "name": "Philip T. Kingston",
+      "district": 14,
+      "address": [
+        {
+          "locationName": "Dallas City Hall",
+          "line1": "1500 Marilla St.",
+          "line2": "Room 5FN",
+          "line3": "",
+          "city": "Dallas",
+          "state": "Texas",
+          "zip": "75201"
+        }
+      ],
+
+      "phones": [
+        "(214) 670-5415"
+      ],
+      "fax":[
+        "(214) 670-5117"
+      ],
+      "urls": [
+        "http://dallascityhall.com/government/citycouncil/district14/Pages/default.aspx"
+      ],
+      "photoUrl": "",
+      "emails": [
+        "philip.kingston@dallascityhall.com"
+      ],
+      "channels": [
+        {
+          "type": "twitter",
+          "id": "PhilipTKingston"
+        },
+        {
+          "type":"facebook",
+          "type":"PhilipTKingston"
+        }
+      ],
+      "staff": [
+        {
+          "name":"Connie Sanchez",
+          "position":"Assistant",
+          "email":"connie.sanchez@dallascityhall.com",
+          "phone":"214-670-5415"
+        },
+        {
+          "name":"Gloria Flores",
+          "position":"Secretary",
+          "email":"gloria.flores@dallascityhall.com",
+          "phone":"214-671-5659"
         }
       ]
     }

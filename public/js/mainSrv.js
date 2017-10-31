@@ -20,7 +20,7 @@ angular.module('app').service('mainSrv', function($http, $q){
   this.getAddress = function(input) {
     console.log(input)
 
-    var repName
+    var repDistrict
     var dallasReps
     var details
 
@@ -29,7 +29,7 @@ angular.module('app').service('mainSrv', function($http, $q){
 
       // console.log(response.data.socrata);
 
-      repName = response.data.socrata.councilper
+      repDistrict = response.data.socrata.district
 
       self.yourInfo = response.data
       return response
@@ -51,15 +51,15 @@ angular.module('app').service('mainSrv', function($http, $q){
         dallasReps = response.data.representatives
         // console.log(dallasReps);
         dallasReps.forEach(function(val){
-          // console.log('valname: ', val.name);
-          // console.log('repname: ', repName);
-          if (val.name == repName) {
+          console.log(' here val val val: ', val);
+          // console.log('repDistrict: ', repDistrict);
+          if (val.district == repDistrict) {
             console.log('bingo!');
 
             details = val
           }
         })
-        // console.log(repName);
+        // console.log(repDistrict);
         // return response
         // self.data = response.data
         return details
