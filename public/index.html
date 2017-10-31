@@ -5,7 +5,21 @@
     <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <style>
+
+      form {
+        display: flex;
+        align-items: center;
+      }
+
+      form button {
+        margin-left: 10px;
+      }
+
       .result-container__list {
+        padding-top: 25px;
+      }
+
+      .brand {
         padding-top: 25px;
       }
     </style>
@@ -13,21 +27,24 @@
   <body ng-controller="mainCtrl">
     <div class="container">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 brand">
           <h1>Dallas Reps</h1>
         </div>
       </div>
       <div class="row">
         <div class="col-12">
           <form ng-submit="getAddress(input)">
-            <input type="text" ng-model="input">
+            <input class="col-4" type="text" ng-model="input">
             <button type="submit" class="btn btn-primary">Get Input!</button>
           </form>
         </div>
       </div>
       <div class="row">
-        <div class="col-12">
-          <div class="result-container__list" ng-repeat="person in yourInfo">
+        <div class="col-12 result-container__list" ng-if="searched">
+          <div ng-if="!yourInfo">
+            Sorry! No results were found. Is this address within Dallas city?
+          </div>
+          <div class="" ng-repeat="person in yourInfo">
             <p>
               <strong>Council Member:</strong> {{person.councilper}}<br>
                <strong>District:</strong> {{person.council}}<br>
@@ -46,6 +63,7 @@
 
           </div>
         </div>
+
 
 
         <!-- <ul>
