@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="app" >
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <style>
+      .result-container__list {
+        padding-top: 25px;
+      }
+    </style>
+  </head>
+  <body ng-controller="mainCtrl">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>Dallas Reps</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <form ng-submit="getAddress(input)">
+            <input type="text" ng-model="input">
+            <button type="submit" class="btn btn-primary">Get Input!</button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="result-container__list" ng-repeat="person in yourInfo">
+            <p>
+              <strong>Council Member:</strong> {{person.councilper}}<br>
+               <strong>District:</strong> {{person.council}}<br>
+               <strong>Office:</strong> {{person.comments}}<br>
+               <strong>Email:</strong> <span ng-repeat="email in matchedRep.emails"><a href="mailto:{{email}}">{{email}}</a></span><br>
+               <strong>Phone:</strong> <span ng-repeat="phone in matchedRep.phones">{{phone}}</span>
+             </p>
+             <p>
+               <strong>Staff:</strong><br>
+               <span ng-repeat="one in matchedRep.staff">
+                 {{one.name}}, <em>
+                 {{one.position}}</em><br>
+                 email: <a href="mailto:{{one.email}}">{{one.email}}</a><br>
+               </span>
+             </p>
+
+          </div>
+        </div>
+
+
+        <!-- <ul>
+          <li ng-repeat="rep in yourReps">
+            {{rep.name}}
+          </li>
+        </ul> -->
+
+      </div>
+    </div>
+
+
+
+
+    <script src="bower_components/angular/angular.js" charset="utf-8"></script>
+
+    <script src="./js/app.js" charset="utf-8"></script>
+    <script src="./js/mainCtrl.js" charset="utf-8"></script>
+    <script src="./js/mainSrv.js" charset="utf-8"></script>
+  </body>
+</html>
