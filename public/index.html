@@ -35,6 +35,14 @@
         border: 1px solid #eee;
       }
 
+      .results__vote-block {
+        /*margin-top: 5px;
+        margin-bottom: 5px;*/
+        border-top: 1px solid #eee;
+
+        padding: 10px;
+      }
+
       .results-member__social {
         padding-top: 10px;
         padding-bottom: 5px;
@@ -44,11 +52,24 @@
         padding-top: 25px;
       }
 
+      .results__vote-container {
+        margin-top: 25px;
+      }
+
+      .pagination-block__box {
+        display: flex;
+        justify-content: center;
+      }
+
+      .pagination-block__box li {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
 
     </style>
   </head>
-  <body ng-controller="mainCtrl">
-    <div class="container">
+  <body>
+    <div class="container" ng-controller="mainCtrl">
       <div class="row">
         <div class="col-12 brand">
           <h1>Dallas Reps</h1>
@@ -67,6 +88,7 @@
         </div>
       </div>
       <div class="row">
+
         <div class="col-12 result-container__list" ng-if="searched">
           <div ng-if="!yourInfo">
             Sorry! No results were found. Is this address within Dallas city?
@@ -90,7 +112,7 @@
               <div class="results-member__social">
                 <a href="http://www.twitter.com/{{matchedRep.channels[0].id}}" target="_blank" ng-if="matchedRep.channels[0].id !== null"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 <a href="http://www.facebook.com/{{matchedRep.channels[1].id}}" target="_blank" ng-if="matchedRep.channels[1].id !== null"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                <!-- <a href="http://www.instagram.com/{{matchedRep.channels[2].id}}" target="_blank" ng-if="matchedRep.channels[0].id.length>0"><i class="fa fa-instagram" aria-hidden="true"></i></a> -->
+                <!-- instagram <a href="http://www.instagram.com/{{matchedRep.channels[2].id}}" target="_blank" ng-if="matchedRep.channels[0].id.length>0"><i class="fa fa-instagram" aria-hidden="true"></i></a> -->
               </div>
 
             </div>
@@ -102,11 +124,47 @@
                {{one.phone}}
              </p>
             </div>
+            <div class="results__vote-container">
+              <h4>Council Voting Record</h4>
+              <!-- <div ng-if="matchedRep.itemsVoted" class="results__vote-block" ng-repeat="item in matchedRep.itemsVoted | orderBy:'item.date'"
+
+              > -->
+
+              <div dir-paginate="item in matchedRep.itemsVoted | itemsPerPage: 5">
+
+                  <div>
+                    <small>Agenda ID: {{item.agenda_id}}, Item No. {{item.agenda_item_number}} | Voter Name:  {{item.voter_name}}<br>
+                    {{item.date}}
+                    </small>
+                    <!-- <br><small>{{item.date}}</small> -->
+                  </div>
+                  <div>
+                    <span class="badge" ng-class="item.vote == 'YES' ? 'badge-success' : 'badge-warning'">{{item.vote}}</span> - {{item.agenda_item_description}}
+                  </div>
+
+                <!-- {{matchedRep.itemsVoted}} -->
+              </div>
+            </div>
+
           </div>
         </div>
 
       </div>
+
+      <div class="pagination-block__box">
+        <dir-pagination-controls></dir-pagination-controls> 
+      </div>
+
+
+
     </div>
+
+    <!-- <div ng-controller="OtherController" class="other-controller">
+      <small>this is in "OtherController"</small>
+      <div class="text-center">
+      <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="dirPagination.tpl.html"></dir-pagination-controls>
+      </div>
+    </div> -->
 
 
 
@@ -116,5 +174,7 @@
     <script src="./js/app.js" charset="utf-8"></script>
     <script src="./js/mainCtrl.js" charset="utf-8"></script>
     <script src="./js/mainSrv.js" charset="utf-8"></script>
+
+     <script src="./js/dirPagination.js"></script>
   </body>
 </html>

@@ -3,31 +3,16 @@ angular.module('app').service('mainSrv', function($http, $q){
 
   var self = this
 
-
-  // var getReps = function() {
-  //   return $http.get('/api/dallasreps.json')
-  //   .then(function(response){
-  //     console.log(response.data);
-  //
-  //     dallasReps = response.data.representatives
-  //
-  //     // self.data = response.data
-  //   })
-  // }
-
-
-
   this.getAddress = function(input) {
-    console.log(input)
+    console.log('user inputted: ', input)
 
     var repDistrict
     var dallasReps
     var details
+    var itemsVoted = []
 
     return $http.get('/data/' + input)
     .then(function(response){
-
-      // console.log(response.data.socrata);
 
       repDistrict = response.data.socrata.district
 
@@ -36,7 +21,7 @@ angular.module('app').service('mainSrv', function($http, $q){
 
     })
     .then(function(response){
-      // console.log(response);
+
       var getMore = function() {
         return $http.get('/api/dallasreps.json')
       }
@@ -46,22 +31,53 @@ angular.module('app').service('mainSrv', function($http, $q){
     })
     .then(function(response){
 
-        // console.log(response.data.representatives);
+        var getVotes = function(){
+          return $http.get('https://www.dallasopendata.com/resource/q7ta-hutd.json')}
 
         dallasReps = response.data.representatives
-        // console.log(dallasReps);
+
         dallasReps.forEach(function(val){
-          console.log(' here val val val: ', val);
-          // console.log('repDistrict: ', repDistrict);
+
           if (val.district == repDistrict) {
-            console.log('bingo!');
 
             details = val
           }
         })
-        // console.log(repDistrict);
-        // return response
-        // self.data = response.data
+
+        getVotes().then(function(response){
+
+          console.log('get votes response: ', response);
+          function convertUTCDateToLocalDate(date) {
+              var newDate = new Date(date.getTime()+date.getTimezoneOffset()*60*1000);
+
+              var offset = date.getTimezoneOffset() / 60;
+              var hours = date.getHours();
+
+              newDate.setHours(hours - offset);
+
+              return newDate;
+          }
+
+          var theArrayOfItems = response.data
+
+          theArrayOfItems.forEach(function(val, idx){
+
+            // if (val.district == details.district && val.voter_name == details.name) {
+
+            if (val.district == details.district) {
+              // val.date = val.date.toLocalDateString('en-us')
+              var date = convertUTCDateToLocalDate(new Date(val.date))
+              val.date = date.toLocaleString()
+              itemsVoted.push(val)
+            }
+          })
+
+          details.itemsVoted = itemsVoted
+
+        })
+
+
+
         return details
     })
     .then(function(response){
@@ -78,4 +94,5 @@ angular.module('app').service('mainSrv', function($http, $q){
 
 
 
+// end of service
 })
