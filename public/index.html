@@ -104,9 +104,11 @@
               </div>
 
               <div ng-if="matchedRep.emails">
-               <!-- <strong>Email:</strong> -->
 
-               <span ng-repeat="email in matchedRep.emails"><a href="mailto:{{email}}"><i class="fa fa-envelope-o" aria-hidden="true"></i> {{email}}</a><br></span>
+               <span ng-repeat="email in matchedRep.emails">
+                 <a href="mailto:{{email}}"><i class="fa fa-envelope-o" aria-hidden="true"></i> {{email}}</a>
+                 <br>
+               </span>
               </div>
 
               <div class="results-member__social">
@@ -136,13 +138,13 @@
                     <small>Agenda ID: {{item.agenda_id}}, Item No. {{item.agenda_item_number}} | Voter Name:  {{item.voter_name}}<br>
                     {{item.date}}
                     </small>
-                    <!-- <br><small>{{item.date}}</small> -->
+
                   </div>
                   <div>
                     <span class="badge" ng-class="item.vote == 'YES' ? 'badge-success' : 'badge-warning'">{{item.vote}}</span> - {{item.agenda_item_description}}
                   </div>
 
-                <!-- {{matchedRep.itemsVoted}} -->
+
               </div>
             </div>
 
@@ -152,22 +154,9 @@
       </div>
 
       <div class="pagination-block__box">
-        <dir-pagination-controls></dir-pagination-controls> 
+        <dir-pagination-controls></dir-pagination-controls>
       </div>
-
-
-
     </div>
-
-    <!-- <div ng-controller="OtherController" class="other-controller">
-      <small>this is in "OtherController"</small>
-      <div class="text-center">
-      <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="dirPagination.tpl.html"></dir-pagination-controls>
-      </div>
-    </div> -->
-
-
-
 
     <script src="bower_components/angular/angular.js" charset="utf-8"></script>
 

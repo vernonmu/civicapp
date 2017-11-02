@@ -66,8 +66,8 @@ angular.module('app').service('mainSrv', function($http, $q){
 
             if (val.district == details.district) {
               // val.date = val.date.toLocalDateString('en-us')
-              var date = convertUTCDateToLocalDate(new Date(val.date))
-              val.date = date.toLocaleString()
+              // var date = convertUTCDateToLocalDate(new Date(val.date))
+              // val.date = date.toLocaleString()
               itemsVoted.push(val)
             }
           })
