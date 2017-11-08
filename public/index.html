@@ -25,27 +25,68 @@
       }
 
       .results__staff-block {
-        margin-top: 25px;
+        /*margin-top: 25px;*/
       }
 
-      .results-member__container,
+      .results-member__container {
+        padding: 0;
+        border: 1px solid #eee;
+        border-radius: 5px;
+      }
+
       .results__staff-block {
+        border: 1px solid #eee;
+        border-radius: 5px;
+      }
+
+      .results__staff-content {
+        padding: 10px
+      }
+
+      .results__vote-container {
         padding:10px;
         border-radius: 5px;
         border: 1px solid #eee;
       }
 
+      .results__vote-container {
+        padding: 0;
+      }
+
       .results__vote-block {
         /*margin-top: 5px;
         margin-bottom: 5px;*/
-        border-top: 1px solid #eee;
-
+        border-bottom: 1px solid #eee;
         padding: 10px;
       }
 
       .results-member__social {
         padding-top: 10px;
         padding-bottom: 5px;
+      }
+
+      .results__voted-items {
+        padding: 10px;
+        border-bottom: 1px #eee solid;
+      }
+
+      .results__voted-items:first {
+        border-top: 0;
+      }
+
+      .results-member__content {
+        padding: 10px;
+      }
+
+      .heading {
+        padding: 10px;
+        background: #eee;
+      }
+
+      .heading h5 {
+        margin-bottom: 0;
+        font-size: 1.25rem;
+        font-weight: normal;
       }
 
       .search__input {
@@ -59,11 +100,17 @@
       .pagination-block__box {
         display: flex;
         justify-content: center;
+        padding-bottom: 25px;
+        padding-top:15px;
       }
 
       .pagination-block__box li {
         padding-left: 5px;
         padding-right: 5px;
+      }
+
+      .voted-items__description {
+        font-size: 14px;
       }
 
     </style>
@@ -87,74 +134,107 @@
           </form>
         </div>
       </div>
-      <div class="row">
-
-        <div class="col-12 result-container__list" ng-if="searched">
-          <div ng-if="!yourInfo">
-            Sorry! No results were found. Is this address within Dallas city?
-          </div>
+      <div ng-if="searched">
+        <div ng-if="!yourInfo">
+          <p>Sorry! No results were found. Is this address within Dallas city?</p>
+        </div>
+        <div class="result-container__list">
           <div ng-repeat="person in yourInfo">
-            <div class="results-member__container">
-              <strong>Council Member:</strong> {{matchedRep.name}}<br>
-
-              <strong>District:</strong> {{matchedRep.district}}
-
-              <div class="" ng-if="matchedRep.phones">
-                <strong>Phone:</strong> <span ng-repeat="phone in matchedRep.phones">{{phone}}</span>
-              </div>
-
-              <div ng-if="matchedRep.emails">
-
-               <span ng-repeat="email in matchedRep.emails">
-                 <a href="mailto:{{email}}"><i class="fa fa-envelope-o" aria-hidden="true"></i> {{email}}</a>
-                 <br>
-               </span>
-              </div>
-
-              <div class="results-member__social">
-                <a href="http://www.twitter.com/{{matchedRep.channels[0].id}}" target="_blank" ng-if="matchedRep.channels[0].id !== null"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="http://www.facebook.com/{{matchedRep.channels[1].id}}" target="_blank" ng-if="matchedRep.channels[1].id !== null"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                <!-- instagram <a href="http://www.instagram.com/{{matchedRep.channels[2].id}}" target="_blank" ng-if="matchedRep.channels[0].id.length>0"><i class="fa fa-instagram" aria-hidden="true"></i></a> -->
-              </div>
-
-            </div>
-            <div class="results__staff-block">
-             <span><strong>Staff:</strong></span>
-             <p ng-repeat="one in matchedRep.staff">
-               {{one.name}}, <em>{{one.position}}</em><br>
-               <a href="mailto:{{one.email}}">{{one.email}}</a><br>
-               {{one.phone}}
-             </p>
-            </div>
-            <div class="results__vote-container">
-              <h4>Council Voting Record</h4>
-              <!-- <div ng-if="matchedRep.itemsVoted" class="results__vote-block" ng-repeat="item in matchedRep.itemsVoted | orderBy:'item.date'"
-
-              > -->
-
-              <div dir-paginate="item in matchedRep.itemsVoted | itemsPerPage: 5">
-
-                  <div>
-                    <small>Agenda ID: {{item.agenda_id}}, Item No. {{item.agenda_item_number}} | Voter Name:  {{item.voter_name}}<br>
-                    {{item.date}}
-                    </small>
-
+            <div class="row">
+              <div class="col-md-6">
+                <div class="results-member__container">
+                  <div class="heading">
+                    <h5>Council Member Info</h5>
                   </div>
-                  <div>
-                    <span class="badge" ng-class="item.vote == 'YES' ? 'badge-success' : 'badge-warning'">{{item.vote}}</span> - {{item.agenda_item_description}}
+                  <div class="results-member__content">
+                    <strong>Council Member:</strong> {{matchedRep.name}}<br>
+
+                    <strong>District:</strong> {{matchedRep.district}}
+
+                    <div class="" ng-if="matchedRep.phones">
+                      <strong>Phone:</strong>
+                      <span ng-repeat="phone in matchedRep.phones">{{phone}}</span>
+                    </div>
+
+                    <div ng-if="matchedRep.emails">
+                     <span ng-repeat="email in matchedRep.emails">
+                       <a href="mailto:{{email}}">
+                         <i class="fa fa-envelope-o"
+                         aria-hidden="true"></i> {{email}}
+                       </a>
+                       <br>
+                     </span>
+                    </div>
+
+                    <div class="results-member__social">
+                      <a href="http://www.twitter.com/{{matchedRep.channels[0].id}}"
+                      target="_blank"
+                      ng-if="matchedRep.channels[0].id !== null">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                      </a>
+                      <a href="http://www.facebook.com/{{matchedRep.channels[1].id}}"
+                      target="_blank"
+                      ng-if="matchedRep.channels[1].id !== null">
+                        <i class="fa fa-facebook-square"
+                        aria-hidden="true"></i>
+                    </a>
+                      <!-- instagram <a href="http://www.instagram.com/{{matchedRep.channels[2].id}}" target="_blank" ng-if="matchedRep.channels[0].id.length>0"><i class="fa fa-instagram" aria-hidden="true"></i></a> -->
+                    </div>
                   </div>
-
-
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="results__staff-block">
+                  <div class="heading">
+                    <h5>Office Staff</h5>
+                  </div>
+                  <div class="results__staff-content">
+                    <p ng-repeat="one in matchedRep.staff">
+                      {{one.name}}, <em>{{one.position}}</em>
+                      <br>
+                      <a href="mailto:{{one.email}}">{{one.email}}</a>
+                      <br>
+                      {{one.phone}}
+                    </p>
+                  </div>
+                  <!-- <span><strong>Staff:</strong></span> -->
+                </div>
               </div>
             </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="results__vote-container">
+                  <div class="heading">
+                    <h5>Council Voting Record</h5>
+                  </div>
 
+                  <!-- <div ng-if="matchedRep.itemsVoted" class="results__vote-block" ng-repeat="item in matchedRep.itemsVoted | orderBy:'item.date'"> -->
+
+                  <div class="results__voted-items" dir-paginate="item in matchedRep.itemsVoted | itemsPerPage: 5">
+                    <div>
+                      <small>Agenda No. {{item.agenda_id}}, Item No. {{item.agenda_item_number}}
+                      <br>Voter Name:  {{item.voter_name}}<br>
+
+                      </small>
+                    </div>
+                    <div>
+                      <span class="badge" ng-class="item.vote == 'YES' ? 'badge-success' : 'badge-warning'">{{item.vote}}</span> - <span class="voted-items__description">{{item.agenda_item_description}}</span>
+                      <br>
+                      <small>{{item.date}}</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-      </div>
-
-      <div class="pagination-block__box">
-        <dir-pagination-controls></dir-pagination-controls>
+        <div class="row">
+          <div class="col-12">
+            <div class="pagination-block__box">
+              <dir-pagination-controls></dir-pagination-controls>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
